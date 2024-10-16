@@ -73,3 +73,42 @@ section {
     -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
     box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
 }
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer ul {
+    text-align: center;
+    justify-content: center;
+    list-style-type: none; /* Opcional: eliminar viñetas */
+    padding: 0; /* Opcional: eliminar padding */
+}
+
+nav ul {
+
+    /* Modelo de diseño flexible */
+    display: flex;									
+    justify-content: space-around;
+   
+}
+
+section form {
+
+    /* Modelo de diseño en cuadrícula */
+    display: grid;									
+    row-gap: 0.5rem;
+
+}
