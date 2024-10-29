@@ -23,8 +23,12 @@ header {
     padding: 20px 0;
 }
 
-p {
+p, #proyectos li, #habilidades span {
     color: var(--color-texto);
+}
+
+#habilidades ul {
+    margin: 55px 7px 10px;
 }
 
 * {
@@ -106,24 +110,10 @@ section {
     margin: 4px 2px 8px 2px;
 
     /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
-    border: none;
-
-    /* relleno (espacio interno) de 
-    1.5% en la parte superior e inferior y 
-    0.8% a los lados derecho e izquierdo. */
-    
     padding: 1.5% 0.8%;
-
-    /* reemplazan el 0.8% inicial en el relleno izquierdo y derecho, 
-    dándoles un valor específico de 1.2% para esos lados. */
 
     padding-left: 1.2%;
     padding-right: 1.2%;
-
-    /* borde redondeado con un radio de 5 píxeles */
-
-    /* en navegadores basados en WebKit, 
-   como versiones antiguas de Safari y Chrome. */
     -webkit-border-radius: 5px;
 
     /* en navegadores antiguos de Mozilla, 
@@ -132,10 +122,6 @@ section {
 
     /* en navegadores modernos. */
     border-radius: 5px;
-
-    /* sombra a un elemento */
-
-
 }
 
 * {
@@ -164,19 +150,34 @@ footer ul {
 }
 
 nav ul {
-
-    /* Modelo de diseño flexible */
     display: flex;
     justify-content: space-around;
 
 }
 
-section form {
+footer p {
+    text-align: center;
+}
 
-    /* Modelo de diseño en cuadrícula */
+section form {
     display: grid;
     row-gap: 0.5rem;
+}
 
+section form button {
+    background-color: #4d412c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 200px;
+}
+
+section form div {
+    display: flex;
+    justify-content: center;
 }
 
 /*#resumen {
@@ -213,4 +214,58 @@ section form {
 
 #resumen img {
     grid-area: D;
+}
+
+#contacto {
+    display: grid;
+    gap: 0rem 4rem;
+    grid-template-columns: 1fr 2fr;
+}
+
+#contacto h2 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+#contacto p {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+#contacto form {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    width: 90%;
+}
+
+footer {
+    background-color: #684d20;
+    margin: auto;
+    padding: 5px;
+}
+ footer p, footer ul li a {
+    color: white;
+ }
+
+ footer a:hover {
+    color: #d18f0a
+}
+
+
+#educacion {
+    display: grid;
+    grid-template-areas: "S S"
+                         "R T";
+}
+
+#educacion h2 {
+    grid-area: S;
+}
+
+#educacion div {
+    grid-area: R;
+}
+
+#educacion iframe {
+    grid-area: T;
 }
