@@ -29,7 +29,7 @@ header {
 
 p,
 #proyectos li,
-#habilidades span, #contacto form {
+#habilidades span, #contacto form, .container {
     color: var(--color-texto);
 }
 
@@ -87,12 +87,11 @@ header p {
 }
 
 #photo {
-
-    /* Ancho del elemento */
-    width: 200px;
-
-    /* Alto del elemento */
+    width: 300px;
     height: auto;
+    border-radius: 50px;
+    display: block; 
+    margin: 0 auto;
 }
 
 nav a {
@@ -122,24 +121,16 @@ nav {
     border-bottom: 3pt dashed var(--color-bottom);
 }
 
-section {
-
-    /* margen (espacio externo) superior, derecho, abajo e izquierda */
+section, aside {
     margin: 4px 2px 8px 2px;
-
-    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
     padding: 1.5% 0.8%;
-
-    padding-left: 1.2%;
-    padding-right: 1.2%;
+    padding-left: 2.5%;
+    padding-right: 2%;
     -webkit-border-radius: 5px;
-
-    /* en navegadores antiguos de Mozilla, 
-   como Firefox.  */
     -moz-border-radius: 5px;
-
-    /* en navegadores modernos. */
     border-radius: 5px;
+    background-color: var(--color-primario);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -151,7 +142,7 @@ nav a:hover {
 }
 
 #habilidades li,
-nav li {
+nav li, .container ul {
     list-style-type: none;
 }
 
@@ -159,9 +150,7 @@ footer ul {
     text-align: center;
     justify-content: center;
     list-style-type: none;
-    /* Opcional: eliminar viñetas */
     padding: 0;
-    /* Opcional: eliminar padding */
 }
 
 nav ul {
@@ -216,7 +205,7 @@ section form div {
     display: grid;
     justify-content: space-around;
     align-items: stretch;
-    grid-template-areas: "A D" "B D";
+    grid-template-areas: "A A" "B D";
 }
 
 #resumen h2 {
@@ -224,11 +213,11 @@ section form div {
 }
 
 #resumen p {
-    grid-area: B;
+    grid-area: D;
 }
 
 #resumen img {
-    grid-area: D;
+    grid-area: B;
 }
 
 #contacto {
@@ -309,4 +298,28 @@ footer a:hover {
 
 #proyectos video{
     grid-area: I;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "P L" "Q L";
+}
+
+.container aside {
+    grid-area: P;
+    margin: 70px 10px 0px;
+    padding: 15px;
+}
+
+.container aside h2, .container aside p, .container aside img {
+    text-align: center;
+}
+
+.container main {
+    grid-area: L;
+}
+
+.container aside ul {
+    margin-left: -30px;
 }
