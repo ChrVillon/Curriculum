@@ -1,3 +1,32 @@
+:root {
+    --color-primario: #fffffe;
+    --color-secundario: #eaddcf;
+    --color-fondo: #f9f4ef;
+    --color-texto: #4d412c;
+    --color-enfasis: #8c7851;
+    --color-headline: #020826;
+    --color-bottom: #5f430a;
+}
+
+body {
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url("fondo.avif");
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    padding: 20px 0;
+}
+
+p {
+    color: var(--color-texto);
+}
+
 * {
 
     /* Familia de fuentes */
@@ -8,12 +37,38 @@
 }
 
 h1 {
-
-    /* Alineación del texto */
     text-align: center;
-
-    /* Grosor de la fuente negrita */
     font-weight: bold;
+    font-size: 250%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-headline);
+}
+
+h2 {
+    font-weight: 650;
+}
+
+header p {
+    text-align: center;
+}
+
+#habilidades ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#hablidades li {
+    flex: 1;
+    text-align: center;
+}
+
+#habilidades span {
+    display: block;
+    text-align: center;
 }
 
 #photo {
@@ -25,13 +80,24 @@ h1 {
     height: auto;
 }
 
+nav a {
+    color: inherit; /* Hereda el color del elemento padre */
+    text-decoration: none; /* Quitar el subrayado */
+}
+
+nav {
+    position: sticky; /* Permite que la barra se quede fija al hacer scroll */
+    top: 0; /* Se queda en la parte superior cuando se hace scroll */
+    background-color: var(--color-fondo); /* Color de fondo (ajusta según tus necesidades) */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para un efecto de elevación */
+    padding: 4px;
+}
+
 .subtitle {
-
-    /* Color del texto en rgba */
-    color: rgb(107 114 128 / 0.89);
-
     /* Transformación del texto a mayúsculas */
     text-transform: uppercase;
+    border-bottom: 3pt dashed var(--color-bottom);
 }
 
 section {
@@ -40,12 +106,12 @@ section {
     margin: 4px 2px 8px 2px;
 
     /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
-    border: 0.2pt solid #cedddd;
+    border: none;
 
     /* relleno (espacio interno) de 
     1.5% en la parte superior e inferior y 
     0.8% a los lados derecho e izquierdo. */
-
+    
     padding: 1.5% 0.8%;
 
     /* reemplazan el 0.8% inicial en el relleno izquierdo y derecho, 
@@ -69,9 +135,7 @@ section {
 
     /* sombra a un elemento */
 
-    -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-    -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-    box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+
 }
 
 * {
@@ -83,7 +147,7 @@ a {
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #d18f0a
 }
 
 li {
