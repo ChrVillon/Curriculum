@@ -305,15 +305,15 @@ footer a:hover {
 }
 
 .container {
-    display: grid;
+    display: flex;
     gap: 10px;
     grid-template-areas: "P L" "Q L";
 }
 
 .container aside {
-    grid-area: P;
     margin: 70px 10px 0px;
     padding: 15px;
+    max-height: 95vh;
 }
 
 .container aside h2, .container aside p, .container aside img {
